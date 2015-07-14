@@ -1,0 +1,12 @@
+---
+name: logcheck
+description: Periodically run log check chain
+enabled: true
+trigger:
+  type: "core.st2.IntervalTimer"
+  parameters:
+    unit: "minutes"
+    delta: 15
+action:
+  ref: "st2-chatops-misc.run_logcheck_chain"
+  parameters: {}

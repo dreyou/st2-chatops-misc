@@ -1,0 +1,10 @@
+---
+    name: "run_logcheck_chain"
+    runner_type: "action-chain"
+    description: "Run logcheck chain action"
+    enabled: true
+    entry_point: "logcheck_chain.yaml"
+    parameters:
+      skip_notify:
+        default:
+          - c1
