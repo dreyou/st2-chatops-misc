@@ -1,0 +1,10 @@
+---
+class_name: "ZabbixSensor"
+entry_point: "zabbix.py"
+description: "Sensor to control zabbix triggers"
+trigger_types:
+  -
+    name: "event2"
+    description: "Active triggers present."
+    payload_schema:
+      type: "object"

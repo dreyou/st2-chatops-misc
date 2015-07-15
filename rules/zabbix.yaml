@@ -1,0 +1,12 @@
+---
+name: on_event2
+description: Rule firing on st2-chatops-misc.event2 when active triggers dicovered
+enabled: true
+trigger:
+    packs: "st2-chatops-misc"
+    type: "st2-chatops-misc.event2"
+action:
+    ref: "hubot.post_message"
+    parameters:
+        message: "WARNING Zabbix trigger: {{trigger.description}}, with priority {{trigger.priority}}, fired on host: {{trigger.host}}! Zabbix server: {{trigger.url}}, comment: {{trigger.comment}}"
+        channel: "general"

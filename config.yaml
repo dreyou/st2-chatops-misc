@@ -4,3 +4,10 @@ activemq_servers:
     user: "User"
     passwd: "Password"
     comment: "Test activemq server"
+zabbix_triggers_poll_enabled: False
+zabbix_min_severity: 1
+zabbix_servers:
+  - url: "http://zabbix-server/api_jsonrpc.php"
+    user: "user"
+    passwd: "Password"
+    comment: "Test zabbix server"
