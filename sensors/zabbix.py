@@ -59,7 +59,7 @@ class ZabbixSensor(PollingSensor):
                 "only_true": "1",
                 "active": "1",
                 "monitored": "1",
-#                "withUnacknowledgedEvents":"1",
+                "withUnacknowledgedEvents":"1",
                 "min_severity": self._config['zabbix_min_severity'],
                 "sortfield": "priority",
                 "sortorder": "DESC"
