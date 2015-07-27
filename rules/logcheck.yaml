@@ -9,4 +9,8 @@ trigger:
     delta: 15
 action:
   ref: "st2-chatops-misc.run_logcheck_chain"
-  parameters: {}
+  parameters:
+    hosts: "hostname.local"
+    match: "SEARCH_STRING"
+    num: "NUMBER_OF_OCCURENCIES"
+    log: "/log/file/path/name"

@@ -4,15 +4,15 @@
             name: "c1"
             ref: "core.remote"
             params:
-                hosts: "hostname"
+                hosts: "{{hosts}}"
                 username: "username"
                 password: "password"
-                cmd: "[[ `tail -100 /opt/apache-tomcat-7.0.57/logs/catalina.out | grep -i SEARCHWORD | wc -l` -gt 10 ]]"
+                cmd: "[[ `tail -100 {{log}} | grep -i {{match}} | wc -l` -gt {{num}} ]]"
             on-success: "c3"
         -
             name: "c3"
             ref: "hubot.post_message"
             params:
-                message: "Too many SEARCHWORD messages in log file"
+                message: "Too many {{match}} messages in log file on {{hosts}}"
                 channel: "general"
     default: "c1"

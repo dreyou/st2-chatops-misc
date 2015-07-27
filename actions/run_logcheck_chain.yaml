@@ -5,6 +5,14 @@
     enabled: true
     entry_point: "logcheck_chain.yaml"
     parameters:
+      hosts:
+        type: "string"
+      match:
+        type: "string"
+      num:
+        type: "string"
+      log:
+        type: "string"
       skip_notify:
         default:
           - c1
